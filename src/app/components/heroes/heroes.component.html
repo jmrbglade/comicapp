@@ -1,0 +1,11 @@
+<section class="section ml-6 mr-6 pt-5">
+    <div class="block">
+        <p class="title">Héroes</p>
+        <p class="subtitle">Marvel Comics & DC Comics</p>
+    </div>
+    <div class="columns is-multiline">
+        <div *ngFor="let heroe of heroes; let i = index" class="column is-12-mobile is-6-tablet is-4-desktop is-3-widescreen is-horizontal-center">
+            <app-heroe-tarjeta [heroe]="heroe" [idx]="i"></app-heroe-tarjeta>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="section ml-6 mr-6 pt-5">
+    <div *ngIf="searchResult.length > 0" class="block">
+        <p>
+            <span class="title is-4">Resultados de la búsqueda: </span>
+            <span class="subtitle is-4">"{{ term }}"</span>
+        </p>
+    </div>
+    <div *ngIf="searchResult.length === 0" class="box has-background-info">
+        <div class="content has-text-white">
+            <span>Lo sentimos, no encontramos resultados para: "{{ term }}"</span>
+        </div>
+    </div>
+    <div class="columns is-multiline">
+        <div *ngFor="let heroe of searchResult" class="column is-12-mobile is-6-tablet is-4-desktop is-3-widescreen is-horizontal-center">
+            <app-heroe-tarjeta [heroe]="heroe" [idx]="heroe.id"></app-heroe-tarjeta>
+        </div>
+    </div>
+</section>

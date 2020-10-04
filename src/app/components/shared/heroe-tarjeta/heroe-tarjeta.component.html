@@ -1,0 +1,20 @@
+<div>
+    <div class="card" style="max-width: 360px;">
+        <div class="card-image">
+            <figure class="image">
+                <img [src]="heroe.img" [alt]="heroe.nombre">
+            </figure>
+        </div>
+        <div class="card-content">
+            <p class="title is-4">{{ heroe.nombre }}</p>
+            <div class="content">
+                <p *ngIf="heroe.bio.length <= 110"> {{ heroe.bio }} </p>
+                <p *ngIf="heroe.bio.length > 110"> {{ heroe.bio | slice:0:110 }}... </p>
+                <p class="subtitle is-6"> ({{ heroe.aparicion | date:'y'}}) </p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a [routerLink]="['/heroe', idx]" class="card-footer-item">Ver más...</a>
+        </footer>
+    </div>
+</div>

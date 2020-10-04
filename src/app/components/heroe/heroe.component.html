@@ -1,0 +1,25 @@
+<section class="section ml-6 mr-6">
+    <p class="title"> {{ heroe.nombre }} </p>
+    <p class="subtitle"> ({{ heroe.aparicion | date:'y' }})</p>
+    <div class="columns">
+        <div class="column is-12-mobile is-6-tablet is-4-desktop is-3-widescreen">
+            <div class="is-horizontal-center">
+                <figure class="image" style="max-width: 400px">
+                    <img [src]="heroe.img" [alt]="heroe.nombre">
+                </figure>
+            </div>
+            <div class="is-horizontal-center">
+                <button (click)="goHeroes()" class="button is-info mt-5 pl-6 pr-6">Regresar</button>
+            </div>
+        </div>
+        <div class="column">
+            <p class="title is-4"> {{ heroe.nombre }} </p>
+            <p> {{ heroe.bio }} </p>
+            <figure class="image mt-5" style="width: 100px">
+                <img *ngIf="heroe.casa === 'DC'" src="assets/img/dc_logo.jpeg" alt="dc_logo">
+                <img *ngIf="heroe.casa === 'Marvel'" src="assets/img/marvel_logo.jpeg" alt="marvel_logo">
+            </figure>
+
+        </div>
+    </div>
+</section>

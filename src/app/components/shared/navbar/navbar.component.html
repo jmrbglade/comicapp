@@ -1,0 +1,33 @@
+<nav class="navbar has-shadow">
+    <div class="navbar-brand">
+        <a [routerLink]="['/home']" class="navbar-item">
+            <img src="assets/img/A-64.png" alt="">
+        </a>
+        <div (click)="toogleNavbar()" class="navbar-burger" #navBurger>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="navbar-menu pl-4" #navMenu>
+        <div class="navbar-start">
+            <a [routerLink]="['/home']" class="navbar-item">Home</a>
+            <a [routerLink]="['/heroes']" class="navbar-item">Heroes</a>
+            <a [routerLink]="['/about']" class="navbar-item">About</a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Nombre del heroe" (keydown.enter)="searchHero(searchHeroText.value)" #searchHeroText>
+                    </p>
+                    <p class="control">
+                        <button (click)="searchHero(searchHeroText.value)" class="button is-primary">
+                            <span>Buscar</span>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

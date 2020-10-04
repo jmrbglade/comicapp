@@ -1,0 +1,14 @@
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    margin-top: auto;
+}
+
+.is-horizontal-center {
+    display: flex;
+    justify-content: center;
+}
